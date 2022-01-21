@@ -17,11 +17,7 @@ class MainActivity : AppCompatActivity() {
         clBackground.setBackgroundColor(Color.BLACK)
 
         clBackground.setOnClickListener {
-            if (isOn) {
-                clBackground.setBackgroundColor(Color.BLACK)
-            } else {
-                clBackground.setBackgroundColor(Color.WHITE)
-            }
+            clBackground.setBackgroundColor(if (isOn) Color.BLACK else Color.WHITE)
             isOn = !isOn
         }
     }
